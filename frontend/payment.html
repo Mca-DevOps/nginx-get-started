@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Paiement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .pay-button {
+            display: block;
+            width: 100%;
+            background-color: #e67e22;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .pay-button:hover {
+            background-color: #d35400;
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 10px;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Paiement Sécurisé</h1>
+        <form>
+            <label for="name">Nom et Prénom</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="card-number">Numéro de Carte</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+            
+            <label for="expiry">Date d'expiration</label>
+            <input type="month" id="expiry" name="expiry" required>
+            
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+            
+            <label for="payment-method">Méthode de paiement</label>
+            <select id="payment-method" name="payment-method">
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            
+            <button type="submit" class="pay-button">Payer maintenant</button>
+        </form>
+    </div>
+    <div class="footer">© 2025 - Tous droits réservés</div>
+</body>
+</html>
