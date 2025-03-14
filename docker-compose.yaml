@@ -27,6 +27,8 @@ services:
       - "3001:3000"
     networks:
       - private_network
+    environment:
+      - ID="WEBAPP-1"
     container_name: webapp-1
 
   ## Setting up the Webapp-2
@@ -36,6 +38,8 @@ services:
       - "3002:3000"
     networks:
       - private_network
+    environment:
+      - ID="WEBAPP-2"
     container_name: webapp-2
 
   ## Setting up the Webapp-3
@@ -45,4 +49,6 @@ services:
       - "3003:3000"
     networks:
       - private_network
+    environment:
+      - ID="WEBAPP-3"
     container_name: webapp-3
