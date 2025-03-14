@@ -22,7 +22,7 @@ services:
 
   ## Setting up the Webapp-1
   webapp-1:
-    build: .
+    image: nginx_get_started_webapp:v1.0.0
     ports:
       - "3001:3000"
     networks:
@@ -33,7 +33,7 @@ services:
 
   ## Setting up the Webapp-2
   webapp-2:
-    build: .
+    image: nginx_get_started_webapp:v1.0.0
     ports:
       - "3002:3000"
     networks:
@@ -44,7 +44,7 @@ services:
 
   ## Setting up the Webapp-3
   webapp-3:
-    build: .
+    image: nginx_get_started_webapp:v1.0.0
     ports:
       - "3003:3000"
     networks:
