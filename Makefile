@@ -14,6 +14,11 @@ docker_build: ## Build the Dockerfile
 	@echo "\nBuilding the Dockerfile...\n"
 	@docker build --no-cache --progress=plain -t nginx_get_started_webapp:v1.0.0 .
 
-docker_run: ## Run the Dockerfile
-	@echo "\nRunning the docker container...\n"
-	@docker run -itd -p 3000:3000 --name nginx_get_started_webapp_container nginx_get_started_webapp:v1.0.0
+docker_run: ## Run the docker-compose containers
+	@docker pull nginx:latest
+	@echo "\nRunning all docker containers...\n"
+	@docker-compose up -d
+
+docker_stop: ## Stop the docker-compose containers
+	@echo "\nStopping all docker containers...\n"
+	@docker-compose down
