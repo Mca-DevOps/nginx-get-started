@@ -18,6 +18,8 @@ services:
       - "8000:80"
     networks:
       - private_network
+    volumes:
+      - ./nginx-volume/nginx.conf:/etc/nginx/nginx.conf:ro
     container_name: nginx-proxy
 
   ## Setting up the Webapp-1
